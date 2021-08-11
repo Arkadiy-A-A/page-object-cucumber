@@ -136,6 +136,7 @@ public class RegistrationFormPage extends BasePage {
                         "'Оформления страхования путешественников'");
 
         }
+        wait.until(ExpectedConditions.attributeToBe(element, "value", value));
         Assert.assertEquals("Поле '" + nameField + "' было заполнено некорректно",
                 value, element.getAttribute("value"));
         return this;

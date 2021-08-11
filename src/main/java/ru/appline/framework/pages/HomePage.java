@@ -28,7 +28,6 @@ public class HomePage extends BasePage {
      *
      * @return HomePage - т.е. остаемся на этой странице
      */
-    @Step("Закрытия сообщения cookies")
     public HomePage closeCookiesDialog() {
         waitUtilElementToBeClickable(cookiesBtnClose).click();
         return this;
@@ -40,7 +39,6 @@ public class HomePage extends BasePage {
      * @param nameBaseMenu - наименование меню
      * @return HomePage - т.е. остаемся на этой странице
      */
-    @Step("Выбираем '{nameBaseMenu}' в главном меню")
     public HomePage selectBaseMenu(String nameBaseMenu) {
         for (WebElement menuItem : listBaseMenu) {
             if (menuItem.getText().trim().equalsIgnoreCase(nameBaseMenu)) {
@@ -58,7 +56,6 @@ public class HomePage extends BasePage {
      * @param nameSubMenu - наименование подменю
      * @return InsurancePage - т.е. переходим на страницу {@link InsurancePage}
      */
-    @Step("Выбираем '{nameSubMenu}' в подменю главного меню")
     public InsurancePage selectSubMenu(String nameSubMenu) {
         for (WebElement menuItem : listSubMenu) {
             if (menuItem.getText().equalsIgnoreCase(nameSubMenu)) {
